@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jajodia.com.scarnedice.MainActivity">
+
+    <TextView
+        android:id="@+id/textYourScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your score:0"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/textCompScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer score:0"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textYourScore"
+        />
+
+    <ImageView
+        android:id="@+id/diceImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCompScore"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/dice1"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@+id/diceImage"
+        android:layout_marginTop="10dp">
+
+
+        <Button
+            android:id="@+id/btnRoll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:text="ROLL" />
+
+        <Button
+            android:id="@+id/btnHold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="HOLD" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="RESET" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textSize="22sp"/>
+
+
+
+</RelativeLayout>
